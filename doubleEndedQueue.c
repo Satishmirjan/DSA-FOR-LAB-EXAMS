@@ -10,14 +10,7 @@ struct queue {
 
 int size; // Size of the queue
 
-// Function to determine the priority of an element in the queue
-int priority(int num) {
-    int i = 0;
-    while (i <= q.rear && *(q.a + i) < num) {
-        i++;
-    }
-    return i;
-}
+
 
 // Function to enqueue an element at the rear of the queue
 void renqueue() {
