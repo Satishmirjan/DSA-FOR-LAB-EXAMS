@@ -91,7 +91,7 @@ void main(){
              case 3:
              add(&t1,&t2,&t4);
                 printf("The sum of time t1 and t2 is ");
-                display(&t3);
+                display(&t4);
                 break;
             case 4:
             exit(0);
