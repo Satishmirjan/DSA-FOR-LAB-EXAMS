@@ -122,14 +122,24 @@ NODE deleteNode(NODE root, int key) {
     return root;
 }
 
-// Function to count the number of nodes in the BST
-int countNodes(NODE root) {
-    if (root == NULL)
+// Function to find height
+int height(NODE root) {
     if (root == NULL)
         return -1;
     int leftHeight = height(root->llink);
     int rightHeight = height(root->rlink);
     return 1 + (leftHeight > rightHeight ? leftHeight : rightHeight);
+}
+
+int countNodes(NODE root){
+    if(root == NULL) return 0;
+    int count = 0;
+
+    count = count + countNodes(root -> llink);
+    count++;
+    count = count + countNodes(root -> rlink);
+    
+    return count;
 }
 
 // Function to find the maximum node in the BST
