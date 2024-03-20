@@ -29,7 +29,7 @@ char associativity(char symbol) {
 }
 
 void infixtopost() {
-    int stk[100];
+    char stk[100];
     int i=0, j=0, top=-1;
     char symbol;
 
