@@ -77,11 +77,11 @@ void display(node last){
     }
     // printf("number of elements%d\n",n); use this to verify your count is correct or not
     node first=last->link;
-    node cur=last->link;
+   
     do{
         printf("%d\t",first->item);
         first=first->link;
-    }while(first!=cur);
+    }while(first!=last->link);
 }
 
 // Function to insert an element at a specific position
@@ -115,7 +115,6 @@ node insertpos(node last,int item,int pos){
             }
             prev->link=temp;
             temp->link=cur;
-            pos++;
             return last;
         }
     }
@@ -162,14 +161,14 @@ int search(node last,int item){
         return -1;
     }
     node cur=last->link;
-    node first=last->link;
+   
     do{
         if(item==cur->item){
             return pos;
         }
         cur=cur->link;
         pos++;
-    }while(cur!=first);
+    }while(cur!=last->link);
     return -1;
 }
 
