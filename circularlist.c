@@ -80,8 +80,8 @@ void display(node last){
    
     do{
         printf("%d\t",first->item);
-        first=first->link;
-    }while(first!=last->link);
+        cur=cur->link;
+    }while(cur!=last->link);
 }
 
 // Function to insert an element at a specific position
