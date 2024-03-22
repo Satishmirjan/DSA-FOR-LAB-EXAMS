@@ -131,7 +131,7 @@ node deletebypos(node head, int pos) {
     if (pos == 1) {
         return deletefront(head);
     }
-    if (pos == n + 1) {
+    if (pos == n ) {
         return deleterear(head);
     }
     n--;
