@@ -166,15 +166,15 @@ void displayNodeDetails(NODE root, int key, NODE parent) {
 }
 
 // Function to search for a node with the given key in the BST and return its parent
-NODE searchWithParent(NODE root, int key, NODE parent) {
-    if (root == NULL || root->item == key)
-        return parent;
+// NODE searchWithParent(NODE root, int key, NODE parent) {
+//     if (root == NULL || root->item == key)
+//         return parent;
     
-    if (key < root->item)
-        return searchWithParent(root->llink, key, root);
-    else
-        return searchWithParent(root->rlink, key, root);
-}
+//     if (key < root->item)
+//         return searchWithParent(root->llink, key, root);
+//     else
+//         return searchWithParent(root->rlink, key, root);
+// }
 
 // Main function
 int main() {
@@ -220,7 +220,7 @@ int main() {
             case 5:
                 printf("Enter the key to search: ");
                 scanf("%d", &key);
-                NODE parent = searchWithParent(root, key, NULL);
+                NODE parent = findParent(root, key);
                 displayNodeDetails(root, key, parent);
                 break;
             case 6:
