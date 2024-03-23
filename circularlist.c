@@ -76,7 +76,7 @@ void display(node last){
         return;
     }
     // printf("number of elements%d\n",n); use this to verify your count is correct or not
-    node first=last->link;
+    node cur=last->link;
    
     do{
         printf("%d\t",first->item);
