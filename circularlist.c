@@ -79,7 +79,7 @@ void display(node last){
     node cur=last->link;
    
     do{
-        printf("%d\t",first->item);
+        printf("%d\t",cur->item);
         cur=cur->link;
     }while(cur!=last->link);
 }
